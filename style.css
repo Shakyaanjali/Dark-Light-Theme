@@ -1,0 +1,46 @@
+
+@import url(https://db.onlinewebfonts.com/c/0be010a98aa1f041ab4952d0f55249f1?family=DINTBold);
+body {
+  font-family: "DINTBold";
+  --cursorSize: 6vw;
+  --textColor: black;
+  --bgColor: white;
+  color: var(--textColor);
+  background: var(--bgColor);
+}
+
+header {
+  position: relative;
+  z-index: 101;
+  margin: 10vw;
+  font-size: 10vw;
+  user-select: none;
+}
+header span {
+  display: inline-block;
+  padding: 1vw;
+}
+
+#logoMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--bgColor);
+  pointer-events: none;
+  transition: clip-path 0.2s ease-out;
+}
+
+#cursor {
+  --margin: calc(var(--cursorSize) * -0.5);
+  border-radius: 50%;
+  background: var(--textColor);
+  position: fixed;
+  top: var(--margin);
+  left: var(--margin);
+  z-index: 100;
+  width: var(--cursorSize);
+  height: var(--cursorSize);
+  border-radius: 50%;
+  transition: transform 0.2s ease-out, width 0.2s ease-out,
+   height 0.2s ease-out, top 0.2s ease-out, left 0.2s ease-out;
+}
